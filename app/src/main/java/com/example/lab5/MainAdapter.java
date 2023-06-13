@@ -33,7 +33,6 @@ public class MainAdapter extends FirebaseRecyclerAdapter<DoctorModel,MainAdapter
                 .load(model.getImagen()).into(holder.img);
 
     }
-
     @NonNull
     @Override
     public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
