@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".InformacionDoctorFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+
+    <RelativeLayout
+        android:id="@+id/rl2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <Button
+            android:id="@+id/btnReservar"
+            android:layout_width="202dp"
+            android:layout_height="68dp"
+            android:layout_below="@+id/nacionalidad"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="82dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="107dp"
+            android:layout_marginBottom="50dp"
+            android:backgroundTint="#198eb6"
+            android:text="Agendar Cita" />
+
+        <TextView
+            android:id="@+id/nacionalidad"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textNacionalidad"
+            android:layout_alignStart="@+id/textNacionalidad"
+            android:layout_alignEnd="@+id/textNacionalidad"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="-96dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="-14dp"
+            android:layout_toRightOf="@+id/img1"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:text="Au"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/textNacionalidad"
+            android:layout_width="155dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/telefono"
+            android:layout_alignStart="@+id/telefono"
+            android:layout_alignEnd="@+id/telefono"
+            android:layout_marginStart="-3dp"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="0sp"
+            android:text="Nacionalidad"
+            android:textColor="#198eb6"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/telefono"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textTelefono"
+            android:layout_alignStart="@+id/textTelefono"
+            android:layout_alignEnd="@+id/textTelefono"
+            android:layout_marginStart="3dp"
+            android:layout_marginLeft="-94dp"
+            android:layout_marginTop="25dp"
+            android:layout_marginEnd="-16dp"
+            android:layout_toRightOf="@+id/img1"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:text="999666777"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/textTelefono"
+            android:layout_width="155dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/edad"
+            android:layout_alignStart="@+id/edad"
+            android:layout_alignEnd="@+id/ciudad2"
+            android:layout_marginStart="-6dp"
+            android:layout_marginTop="12dp"
+            android:layout_marginEnd="192dp"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="0sp"
+            android:text="Telefono"
+            android:textColor="#198eb6"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/edad"
+            android:layout_width="168dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textUbicacion"
+            android:layout_alignStart="@+id/textEdad"
+            android:layout_marginStart="0dp"
+            android:layout_marginLeft="-97dp"
+            android:layout_marginTop="98dp"
+            android:layout_toRightOf="@+id/img1"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:text="30"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/textEdad"
+            android:layout_width="155dp"
+            android:layout_height="29dp"
+            android:layout_below="@+id/ciudad2"
+            android:layout_alignStart="@+id/ciudad2"
+            android:layout_alignEnd="@+id/ciudad2"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="202dp"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="0sp"
+            android:text="Edad"
+            android:textColor="#198eb6"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/ciudad2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textUbicacion"
+            android:layout_marginLeft="-111dp"
+            android:layout_marginTop="17dp"
+            android:layout_toRightOf="@+id/img1"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:text="Country- State - City"
+            android:textColor="#000"
+            android:textSize="16sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:id="@+id/textUbicacion"
+            android:layout_width="143dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="38dp"
+            android:layout_marginTop="267dp"
+            android:layout_marginEnd="210dp"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="0sp"
+            android:text="Ubicacion"
+            android:textColor="#198eb6"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/regresar"
+            android:layout_width="26.7dp"
+            android:layout_height="26.7dp"
+            android:layout_alignBottom="@+id/Perfil"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="26dp"
+            android:layout_marginBottom="9dp"
+            android:clickable="true"
+            android:src="@drawable/baseline_arrow_back_ios_24"
+            app:layout_constraintBottom_toBottomOf="@id/Perfil"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@id/Perfil" />
+
+        <TextView
+            android:id="@+id/Perfil"
+            android:layout_width="286dp"
+            android:layout_height="37dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="141dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="124dp"
+            android:fontFamily="@font/averiasanslibreregular"
+            android:gravity="center_horizontal"
+            android:letterSpacing="-0.02"
+            android:lineSpacingExtra="0sp"
+            android:text="Perfil Doctor"
+            android:textColor="#198eb6"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="89dp"
+            android:layout_height="89dp"
+            android:layout_below="@+id/regresar"
+
+            android:layout_alignStart="@+id/regresar"
+
+            android:layout_marginStart="-5dp"
+
+
+            android:layout_marginTop="44dp"
+            android:src="@mipmap/ic_launcher"
+            app:civ_border_color="#FF000000"
+            app:civ_border_width="2dp" />
+
+        <TextView
+            android:id="@+id/textViewNombre"
+            android:layout_width="164dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/img1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="25dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginEnd="60dp"
+            android:layout_toEndOf="@+id/img1"
+            android:text="Dr. Monsieur Juarez" />
+
+        <TextView
+            android:id="@+id/email"
+            android:layout_width="194dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/textViewNombre"
+            android:layout_alignBottom="@+id/img1"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="21dp"
+            android:layout_marginEnd="37dp"
+            android:layout_marginBottom="23dp"
+            android:layout_toEndOf="@+id/img1"
+            android:text="mail@gmail.com" />
+
+        <TextView
+            android:id="@+id/genero"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewNombre"
+            android:layout_alignEnd="@+id/email"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="51dp"
+            android:layout_marginEnd="23dp"
+            android:layout_toEndOf="@+id/img1"
+            android:text="Hombre" />
+
+        <TextView
+            android:id="@+id/textcosto"
+            android:layout_width="107dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/genero"
+            android:layout_alignEnd="@+id/email"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginEnd="91dp"
+            android:layout_toEndOf="@+id/img1"
+            android:text="Costo" />
+
+        <TextView
+            android:id="@+id/costo"
+            android:layout_width="108dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textcosto"
+            android:layout_alignBottom="@+id/textcosto"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="-1dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginBottom="1dp"
+            android:text="150" />
+
+        <TextView
+            android:id="@+id/usuario"
+            android:layout_width="110dp"
+            android:layout_height="20dp"
+            android:layout_below="@+id/img1"
+            android:layout_alignStart="@+id/img1"
+            android:layout_alignEnd="@+id/img1"
+            android:layout_marginStart="-6dp"
+            android:layout_marginTop="20dp"
+            android:text="as234" />
+
+    </RelativeLayout>
+
+</FrameLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaDoctoresFragment">
+
+    <fragment
+        android:id="@+id/listaDoctoresFragment"
+        android:name="com.example.lab5.ListaDoctoresFragment"
+        android:label="fragment_lista_doctores"
+        tools:layout="@layout/fragment_lista_doctores" >
+        <action
+            android:id="@+id/action_listaDoctoresFragment_to_informacionDoctorFragment"
+            app:destination="@id/informacionDoctorFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/informacionDoctorFragment"
+        android:name="com.example.lab5.InformacionDoctorFragment"
+        android:label="fragment_informacion_doctor"
+        tools:layout="@layout/fragment_informacion_doctor" />
+</navigation>
