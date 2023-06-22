@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-             android:layout_height="match_parent">
+    android:layout_height="200dp">
 
     <RelativeLayout
+        android:id="@+id/rl2"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="190dp"
         android:padding="20dp">
 
         <ImageView
@@ -24,9 +24,10 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_toRightOf="@+id/img1"
-            android:text="Student Name"
+            android:fontFamily="@font/averiasanslibrebold"
+            android:text="Dr. Pawan"
             android:textColor="#000"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold" />
 
         <TextView
@@ -34,12 +35,13 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/nametext"
-            android:layout_marginLeft="10dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="16dp"
             android:layout_toRightOf="@+id/img1"
+            android:fontFamily="@font/averiasanslibrebold"
             android:text="Country- State - City"
             android:textColor="#000"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="bold"></TextView>
 
         <Button
@@ -48,11 +50,10 @@
             android:layout_height="38dp"
             android:layout_below="@+id/ciudad"
             android:layout_alignParentEnd="true"
-            android:layout_marginTop="30dp"
-            android:layout_marginEnd="105dp"
-            android:backgroundTint="#4CB8DA"
+            android:layout_marginTop="13dp"
+            android:layout_marginEnd="125dp"
+            android:backgroundTint="#198eb6"
             android:text="Info" />
-
 
     </RelativeLayout>
 

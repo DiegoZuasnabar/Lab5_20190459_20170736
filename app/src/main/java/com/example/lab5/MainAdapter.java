@@ -1,56 +1,99 @@
 package com.example.lab5;
 
+import android.content.Context;
+import android.graphics.Color;
+import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
+import androidx.navigation.NavController;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.firebase.ui.database.FirebaseRecyclerAdapter;
-import com.firebase.ui.database.FirebaseRecyclerOptions;
+import com.example.lab5.dto.DoctorModel;
 
-public class MainAdapter extends FirebaseRecyclerAdapter<DoctorModel,MainAdapter.myViewHolder> {
-    /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
-    public MainAdapter(@NonNull FirebaseRecyclerOptions<DoctorModel> options) {
-        super(options);
-    }
+import java.util.List;
 
-    @Override
-    protected void onBindViewHolder(@NonNull myViewHolder holder, int position, @NonNull DoctorModel model) {
-        holder.name.setText(model.getApellido());
-        holder.ciudad.setText(model.getPais());
-
-        Glide.with(holder.img.getContext())
-                .load(model.getImagen()).into(holder.img);
-
-    }
+public class MainAdapter  extends RecyclerView.Adapter<MainAdapter.ViewHolder> {
+    private List<DoctorModel> listaDoctores;
+    private Context context;
     @NonNull
     @Override
-    public myViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.main_item,parent,false);
-        return new myViewHolder(view);
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(context).inflate(R.layout.main_item, parent, false);
+        return new ViewHolder(view);
+
     }
 
-    class myViewHolder extends RecyclerView.ViewHolder{
-        ImageView img;
-        TextView name,ciudad;
+    @Override
+    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+        DoctorModel doctor = listaDoctores.get(position);
+        System.out.println("POSICIIONNNNN" + position);
+        holder.doctor = doctor;
+        View view = holder.itemView.findViewById(R.id.rl2);
+        view.setBackgroundColor(Color.GRAY);
+        TextView nametext = holder.itemView.findViewById(R.id.nametext);
+        nametext.setText("Dr. "+ doctor.getNombre());
+        TextView ciudad = holder.itemView.findViewById(R.id.ciudad);
+        ciudad.setText(doctor.getPais()+ " - "+doctor.getEstado()+" - "+doctor.getCiudad());
+        Log.d("msg", "DOCTOR: "+doctor.getCiudad());
+        ImageView img1 = holder.itemView.findViewById(R.id.img1);
+        Glide.with(context).load(doctor.getImagen()).into(img1);
+        //boton para la info
+        Button button2 = holder.itemView.findViewById(R.id.button2);
+        button2.setOnClickListener(v -> {
+            //Bundle para enviar datos entre fragmentos
+            Bundle bundle = new Bundle();
+            String id=String.valueOf(doctor.getId());
+            bundle.putString("id", id);
+            navController.navigate(R.id.action_listaDoctoresFragment_to_informacionDoctorFragment, bundle);
+        });
+    }
 
-        public myViewHolder(@NonNull View itemView){
+    @Override
+    public int getItemCount() {
+        return listaDoctores.size();
+    }
+
+
+    public class ViewHolder extends RecyclerView.ViewHolder{
+        DoctorModel doctor;
+        public ViewHolder(@NonNull View itemView){
+
             super(itemView);
-            img=(ImageView)itemView.findViewById(R.id.img1);
-            name=(TextView) itemView.findViewById(R.id.nametext);
-            ciudad=(TextView) itemView.findViewById(R.id.ciudad);
-
         }
+    }
 
+    public Context getContext() {
+        return context;
+    }
+
+    public void setContext(Context context) {
+        this.context = context;
+    }
+
+    public List<DoctorModel> getListaDoctores() {
+        return listaDoctores;
+    }
+
+    public void setListaDoctores(List<DoctorModel> listaDoctores) {
+        this.listaDoctores = listaDoctores;
+    }
+
+    //nav controller
+    private NavController navController;
+
+    public NavController getNavController() {
+        return navController;
+    }
+
+    public void setNavController(NavController navController) {
+        this.navController = navController;
     }
 }
